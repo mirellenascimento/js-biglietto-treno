@@ -1,4 +1,4 @@
-var km = prompt ("Per calcolare il prezzo del tuo viaggio, rispondi alle domande:\nQuanti chilometri voui percorrere?");
+var km = prompt ("Per calcolare il prezzo del tuo viaggio, rispondi alle domande:\nQuanti chilometri vuoi percorrere?");
 console.log(km)
 var age = prompt ("Quanti anni hai?");
 console.log(age)
@@ -7,15 +7,15 @@ console.log(age)
 var kmPrice = 0.21;
 
 var discountUnder18 = 0.80;
-var priceUnder18 = km * kmPrice * discountUnder18;
-priceUnder18.toFixed(2);
+var formulaUnder18 = km * kmPrice * discountUnder18;
+priceUnder18 = formulaUnder18.toFixed(2);
 
 var discountOver65 = 0.60;
-var priceOver65 = km * kmPrice * discountOver65;
-priceOver65.toFixed(2);
+var formulaOver65 = km * kmPrice * discountOver65;
+priceOver65 = formulaOver65.toFixed(2);
 
-var normalPrice = km * kmPrice;
-normalPrice.toFixed(2);
+var noDiscount = km * kmPrice;
+normalPrice = noDiscount.toFixed(2);
 
 
 if (isNaN(km) || isNaN(age)){
