@@ -74,9 +74,9 @@ tr{
   font-size: 1.2rem;
 }
 
-tr > *{
+/* tr > *{
   min-width: 150px;
-}
+} */
 
 /* .output-wrapper > .row:last-child [class*=col]:first-child{
   background-color: grey;

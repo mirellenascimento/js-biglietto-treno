@@ -2,10 +2,16 @@ var KM_PRICE = 0.21;
 var DISCOUNT_UNDER = 0.20;
 var DISCOUNT_OVER = 0.40;
 
+var name;
+var km;
+var discount;
+var carriageNumber = Math.floor(Math.random() * (12 - 1)) + 1;
+var ticketCode = Math.floor(Math.random() * (100000 - 10000)) + 100000;
+
+
 var fullPrice = km * KM_PRICE;
 var underPrice = fullPrice -= fullPrice * DISCOUNT_UNDER;
 var overPrice = fullPrice -= fullPrice * DISCOUNT_OVER;
-
 
 
 var generateButton = document.getElementById("genera");
@@ -20,22 +26,64 @@ generateButton.addEventListener("click", function(){
   console.log(name);
   var km = document.getElementById("kmDaPercorrere").value;
   console.log(km);
-  var under = document.getElementById("under18").checked;
-  console.log(under);
-  var adult = document.getElementById("adult18-64").checked;
-  console.log(adult);
-  var over = document.getElementById("over65").checked;
-  console.log(over);
+  var discount = document.getElementById("age").value;
+  console.log(discount);
+
+
+
+  document.getElementById("nome").innerHTML = name;
+
+
+  if (discount == "under18"){
+    document.getElementById("discountApplied").innerHTML = "Sconto Minorenne";
+  } else if (discount == "over65"){
+    document.getElementById("discountApplied").innerHTML = " Sconto Over 65";
+  } else {
+    document.getElementById("discountApplied").innerHTML = " Senza Sconto";
+  }
+
+
+
+  document.getElementById("carriage").innerHTML = carriageNumber;
+  document.getElementById("codice").innerHTML = ticketCode;
+
+
  });
+ // if (under){
+ //   document.getElementById("siacountApplied").innerHTML = "Sconto Minnorene";
+ // } else if (over){
+ //   document.getElementById("siacountApplied").innerHTML = "Sconto Over 65";
+ // } else {
+ //   document.getElementById("siacountApplied").innerHTML = "Senza Sconto";
+ // }
 
 
-
-
- var formulaUnder18 = km * kmPrice * discountUnder18;
- priceUnder18 = formulaUnder18.toFixed(2);
 
 
 //
+//
+//  if (isNaN(km) {
+//    alert("I numeri inseriti non sono validi");
+//    console.log("I numeri non sono validi")
+//  }
+//  else {
+//    if (under){
+//      document.getElementById('finalPrice').innerHTML = underPrice.toFixed(2) + " €";
+//      console.log(underPrice.toFixed(2) + " €");
+//    }
+//    else if (age > 64){
+//      document.getElementById('price').innerHTML = priceOver65 + " €";
+//      console.log(km * kmPrice * discountOver65 + " €");
+//    }
+//    else{
+//      document.getElementById('price').innerHTML = normalPrice + " €";
+//      console.log(normalPrice + " €");
+//    }
+//  }
+//
+//
+//  var formulaUnder18 = km * kmPrice * discountUnder18;
+//  priceUnder18 = formulaUnder18.;
 //
 //
 // var formulaUnder18 = km * kmPrice * discountUnder18;
@@ -46,23 +94,3 @@ generateButton.addEventListener("click", function(){
 //
 // var noDiscount = km * kmPrice;
 // normalPrice = noDiscount.toFixed(2);
-//
-//
-// if (isNaN(km) || isNaN(age)){
-//   alert("I numeri inseriti non sono validi");
-//   console.log("I numeri non sono validi")
-// }
-// else {
-//   if (age < 18){
-//     document.getElementById('price').innerHTML = priceUnder18 + " €";
-//     console.log( priceUnder18 + " €");
-//   }
-//   else if (age > 64){
-//     document.getElementById('price').innerHTML = priceOver65 + " €";
-//     console.log(km * kmPrice * discountOver65 + " €");
-//   }
-//   else{
-//     document.getElementById('price').innerHTML = normalPrice + " €";
-//     console.log(normalPrice + " €");
-//   }
-// }
