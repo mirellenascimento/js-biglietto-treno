@@ -8,10 +8,17 @@ body{
 
 h1{
   margin: 30px 0 10px 0;
+  font-weight: 500;
 }
 
 h2{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+h3{
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 .input-wrapper, .output-wrapper{
@@ -31,11 +38,9 @@ h2{
   text-align: center;
 }
 
-.input-wrapper .row:first-child{
+.input-wrapper .row{
   width: 80%;
   margin: auto;
-  height: 170px;
-  padding-top: 40px;
 }
 
 input[type=text], input[type=number], select {
@@ -45,6 +50,7 @@ input[type=text], input[type=number], select {
 }
 
 .btn-primary{
+  margin-top: 30px;
   background-color: lightgrey;
   color: #b51250;
   border: 1px solid #b51250;
@@ -53,7 +59,19 @@ input[type=text], input[type=number], select {
 
 /* Output Wrapper */
 
-.output-wrapper .row{
+#outputText{
+  display: none;
+}
+#outputBlock{
+  display: none;
+}
+
+.output-wrapper{
+  height: 1100px;
+  margin-bottom: 50px;
+}
+
+.output-wrapper > .row{
   width: 95%;
   margin: auto;
   border-bottom: 1px solid grey;
@@ -62,23 +80,23 @@ input[type=text], input[type=number], select {
 .output-wrapper .row:first-child{
   height: 50px;
 }
-.output-wrapper .row:last-child .col-3{
+.output-wrapper .row:last-child .col-md-3{
   background-color: grey;
-  height: 200px;
   padding-top: 20px;
 }
 
-tr{
-  height: 80px;
-  line-height: 80px;
-  font-size: 1.2rem;
+.output-wrapper .row:last-child [class*="col"]{
+  height: 200px;
 }
 
-/* tr > *{
-  min-width: 150px;
-} */
 
-/* .output-wrapper > .row:last-child [class*=col]:first-child{
-  background-color: grey;
-  height: 200px;
-} */
+@media screen and (min-width: 768px) {
+  .output-wrapper{
+    height: 300px;
+  }
+  .output-wrapper .row:last-child .col-md-3{
+    height: 200px;
+    padding-top: 20px;
+  }
+
+}

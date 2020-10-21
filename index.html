@@ -10,7 +10,7 @@
   <body>
     <section id="inputSection">
       <h1 class="text-uppercase text-center">calcola il prezzo del tuo biglietto</h1>
-      <div class="container input-wrapper">
+      <div class="container input-wrapper d-flex flex-column align-items-center justify-content-center">
         <div class="row row-cols-1 row-cols-md-3">
           <div class="col">
             <p>Nome Cognome</p>
@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col-12">
             <button id="genera" class="btn btn-primary" type="button" name="genera">Genera</button>
             <button id="annulla" class="btn btn-primary" type="button" name="annulla">Annulla</button>
           </div>
@@ -38,33 +38,37 @@
       </div>
     </section>
     <section id="outputTicket">
-      <h1 class="text-uppercase text-center">il tuo biglietto</h1>
-      <div class="container output-wrapper">
+      <h1 id="outputText" class="text-uppercase text-center">il tuo biglietto</h1>
+      <div id="outputBlock" class="container output-wrapper">
         <div class="row">
           <div class="col-12">
             <h2 class="text-uppercase">Dettaglio Passeggeri</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-3">
+          <div class="col-sm-12 col-md-3">
             <h2 class="text-uppercase">Nome Passeggero</h2>
             <h2 id="nome">Lorem</h2>
           </div>
-          <div class="col">
-            <table>
-              <tr>
-                <th>Offerta</th>
-                <th>Carrozza</th>
-                <th>Codice CP</th>
-                <th>Costo biglietto</th>
-              </tr>
-              <tr>
-                <td id="discountApplied">Lorem</td>
-                <td id="carriage">Lorem</td>
-                <td id="codice">Lorem</td>
-                <td id="finalPrice">Lorem</td>
-              </tr>
-            </table>
+          <div class="col-sm-12 col-md-9">
+            <div class="row row-cols-1 row-cols-md-4">
+              <div class="col d-flex flex-column justify-content-around">
+                <h2>Offerta</h2>
+                <h3 id="discountApplied">Lorem</h3>
+              </div>
+              <div class="col d-flex flex-column justify-content-around">
+                <h2>Carrozza</h2>
+                <h3 id="carriage">Lorem</h3>
+              </div>
+              <div class="col d-flex flex-column justify-content-around">
+                <h2>Codice CP</h2>
+                <h3 id="codice">Lorem</h3>
+              </div>
+              <div class="col d-flex flex-column justify-content-around">
+                <h2>Costo biglietto</h2>
+                <h3 id="finalPrice">Lorem</h3>
+              </div>
+            </div>
           </div>
         </div>
       </div>
