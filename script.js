@@ -1,12 +1,29 @@
 var KM_PRICE = 0.21;
-var DISCOUNT_UNDER = 0.80;
-var DISCOUNT_OVER = 0.60;
+var DISCOUNT_UNDER = 0.20;
+var DISCOUNT_OVER = 0.40;
 
 
 
+var generateButton = document.getElementById("genera");
+var cleanButton = document.getElementById("annulla");
 
-var nome = document.getElementById("nomeECognome");
-var km = document.getElementById("kmDaPercorrere");
+
+// Buttons Action
+
+generateButton.addEventListener("click", Function(){
+  var visitatore;
+  var name = document.getElementById("nomeECognome").value;
+  console.log(name);
+  var km = document.getElementById("kmDaPercorrere").value;
+  console.log(km);
+  var under = document.getElementById("under18").checked;
+  console.log(under);
+  var adult = document.getElementById("adult18-64").checked;
+  console.log(adult);
+  var over = document.getElementById("over65").checked;
+  console.log(over);
+})
+
 
 
 
