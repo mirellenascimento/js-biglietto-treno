@@ -1,16 +1,18 @@
-var km = prompt ("Per calcolare il prezzo del tuo viaggio, rispondi alle domande:\nQuanti chilometri vuoi percorrere?");
-console.log(km)
-var age = prompt ("Quanti anni hai?");
-console.log(age)
+var KM_PRICE = 0.21;
+var DISCOUNT_UNDER = 0.80;
+var DISCOUNT_OVER = 0.60;
 
 
-var kmPrice = 0.21;
 
-var discountUnder18 = 0.80;
+
+var nome = document.getElementById("nomeECognome");
+var km = document.getElementById("kmDaPercorrere");
+
+
+
 var formulaUnder18 = km * kmPrice * discountUnder18;
 priceUnder18 = formulaUnder18.toFixed(2);
 
-var discountOver65 = 0.60;
 var formulaOver65 = km * kmPrice * discountOver65;
 priceOver65 = formulaOver65.toFixed(2);
 
