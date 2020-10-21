@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+
+    <!-- Input Section -->
     <section id="inputSection">
       <h1 class="text-uppercase text-center">calcola il prezzo del tuo biglietto</h1>
+
+      <!-- Wrapper-->
       <div class="container input-wrapper d-flex flex-column align-items-center justify-content-center">
+
+        <!-- Input-->
         <div class="row row-cols-1 row-cols-md-3">
           <div class="col">
             <p>Nome Cognome</p>
@@ -29,6 +35,8 @@
             </select>
           </div>
         </div>
+
+        <!-- Buttons-->
         <div class="row">
           <div class="col-12">
             <button id="genera" class="btn btn-primary" type="button" name="genera">Genera</button>
@@ -37,34 +45,41 @@
         </div>
       </div>
     </section>
+
+    <!-- Output Section -->
     <section id="outputTicket">
       <h1 id="outputText" class="text-uppercase text-center">il tuo biglietto</h1>
+
+      <!-- Wrapper-->
       <div id="outputBlock" class="container output-wrapper">
         <div class="row">
           <div class="col-12">
             <h2 class="text-uppercase">Dettaglio Passeggeri</h2>
           </div>
         </div>
+
+
+      <!-- Output-->
         <div class="row">
           <div class="col-sm-12 col-md-3">
             <h2 class="text-uppercase">Nome Passeggero</h2>
-            <h2 id="nome">Lorem</h2>
+            <h2 id="nome" class="text-capitalize">Lorem</h2>
           </div>
           <div class="col-sm-12 col-md-9">
             <div class="row row-cols-1 row-cols-md-4">
-              <div class="col d-flex flex-column justify-content-around">
+              <div class="col d-flex flex-column justify-content-between">
                 <h2>Offerta</h2>
                 <h3 id="discountApplied">Lorem</h3>
               </div>
-              <div class="col d-flex flex-column justify-content-around">
+              <div class="col d-flex flex-column justify-content-between">
                 <h2>Carrozza</h2>
                 <h3 id="carriage">Lorem</h3>
               </div>
-              <div class="col d-flex flex-column justify-content-around">
+              <div class="col d-flex flex-column justify-content-between">
                 <h2>Codice CP</h2>
                 <h3 id="codice">Lorem</h3>
               </div>
-              <div class="col d-flex flex-column justify-content-around">
+              <div class="col d-flex flex-column justify-content-between">
                 <h2>Costo biglietto</h2>
                 <h3 id="finalPrice">Lorem</h3>
               </div>
@@ -73,6 +88,8 @@
         </div>
       </div>
     </section>
-  <script src="script.js" charset="utf-8"></script>
+
+    <!-- Script-->
+    <script src="script.js" charset="utf-8"></script>
   </body>
 </html>

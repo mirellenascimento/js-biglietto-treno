@@ -29,7 +29,7 @@ h3{
   color: black;
   border-radius: 20px;
   box-shadow: 5px, 5px, 2px;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 /* Input Wrapper */
@@ -69,17 +69,18 @@ input[type=text], input[type=number], select {
 .output-wrapper{
   height: 1100px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .output-wrapper > .row{
   width: 95%;
   margin: auto;
-  border-bottom: 1px solid grey;
-
 }
+
 .output-wrapper .row:first-child{
   height: 50px;
 }
+
 .output-wrapper .row:last-child .col-md-3{
   background-color: grey;
   padding-top: 20px;
@@ -87,6 +88,15 @@ input[type=text], input[type=number], select {
 
 .output-wrapper .row:last-child [class*="col"]{
   height: 200px;
+  border-bottom: 1px solid grey;
+}
+
+.output-wrapper .row:last-child [class*="col"] h2{
+  margin-top: 30px;
+}
+
+.output-wrapper .row:last-child [class*="col"] h3{
+  margin-bottom: 30px;
 }
 
 
@@ -94,9 +104,19 @@ input[type=text], input[type=number], select {
   .output-wrapper{
     height: 300px;
   }
+
+  .output-wrapper > .row{
+    border-bottom: 1px solid grey;
+  }
+
   .output-wrapper .row:last-child .col-md-3{
     height: 200px;
     padding-top: 20px;
   }
+
+  .output-wrapper .row:last-child [class*="col"]{
+    border-bottom: none;
+  }
+
 
 }

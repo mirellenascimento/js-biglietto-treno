@@ -15,9 +15,7 @@ var ticketCode = Math.floor(Math.random() * (1000000 - 100000)) + 100000;
 var generateButton = document.getElementById("genera");
 var cleanButton = document.getElementById("annulla");
 
-
 // Button GENERA Action
-
 
 generateButton.addEventListener("click", function(){
 // imput data
@@ -40,33 +38,33 @@ generateButton.addEventListener("click", function(){
   document.getElementById("codice").innerHTML = ticketCode;
 
 
-// Discount and Price
+// Discount and Prices
   if (isNaN(fullPrice)){
     alert("Non hai inserito i valori!");
     document.getElementById("outputText").style.display = "none";
     document.getElementById("outputBlock").style.display = "none";
   } else {
+    document.getElementById("outputText").style.display = "block";
+    document.getElementById("outputBlock").style.display = "block";
+
     if (discount == "under18"){
       document.getElementById("discountApplied").innerHTML = "Sconto Minorenne";
       document.getElementById("finalPrice").innerHTML = underPrice.toFixed(2) + " €" ;
-      document.getElementById("outputText").style.display = "block";
-      document.getElementById("outputBlock").style.display = "block";
     } else if (discount == "over65"){
       document.getElementById("discountApplied").innerHTML = " Sconto Over 65";
       document.getElementById("finalPrice").innerHTML = overPrice.toFixed(2) + " €" ;
-      document.getElementById("outputText").style.display = "block";
-      document.getElementById("outputBlock").style.display = "block";
     } else {
       document.getElementById("discountApplied").innerHTML = " Senza Sconto";
       document.getElementById("finalPrice").innerHTML = fullPrice.toFixed(2) + " €" ;
-      document.getElementById("outputText").style.display = "block";
-      document.getElementById("outputBlock").style.display = "block";
     }
   }
+});
 
+// Button ANNULLA Action
 
-
-
-
-
- });
+cleanButton.addEventListener("click", function(){
+  document.getElementById("nomeECognome").value = "";
+  document.getElementById("kmDaPercorrere").value = "";
+  document.getElementById("outputText").style.display = "none";
+  document.getElementById("outputBlock").style.display = "none";
+});
